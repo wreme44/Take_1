@@ -1,0 +1,89 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    font-size: 0.9; /* This reduces the font size  */
+    background-image: url('/p2/computer-screen-code-glitch-animation-gif-background-free.gif');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    margin: 100;
+    padding: 60px; /* Adjusting size*/
+    animation: backgroundLoop 10s infinite; /* Matrix Digital  */
+    color: #ffffff; 
+}
+img {
+    width: 100%;
+    max-width: 800px; /* This ensures the image doesn't get larger than 600px */
+    height: auto;     /* This maintains the aspect ratio */
+}
+@keyframes backgroundLoop {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+header {
+    background-color: #14127a;
+    color: #fff;
+    padding: 5px;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 10;
+    padding: 0;
+}
+
+nav li {
+    display: inline;
+    margin-right: 20px;
+}
+
+section {
+    margin: 20px;
+    padding: 20px;
+    background-color: rgba(22, 131, 161, 0.891);
+    border: 1px solid #c10df3;
+}
+
+h2 {
+    color: hsl(0, 0%, 90%);
+}
+
+h3 {
+    color: #fff;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #ccc;
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 8px;
+}
+
+a {
+    color: #fff;
+}
+a:hover {
+    color: #ddd; 
+}
+body, p, span, div {
+    color: #fff !important;
+}
+footer {
+    background-color: #282121;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
