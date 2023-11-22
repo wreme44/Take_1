@@ -1,0 +1,29 @@
+body {
+    background-color: #121212; /* Dark theme for the background */
+}
+
+#gameBoard {
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+    display: grid;
+    grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+    gap: 5px;
+}
+
+#gameBoard div {
+    border: 2px solid #ADD8E6; /* Baby blue border */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    color: white;
+}
+
+.user {
+    color: #32CD32; /* Lime green for the user */
+}
+
+.computer {
+    color: #FF1493; /* Neon pink for the computer */
+}

@@ -1,14 +1,33 @@
-function calculateStatistics() {
-    const num1 = parseFloat(document.getElementById('num1').value);
-    const num2 = parseFloat(document.getElementById('num2').value);
-    const num3 = parseFloat(document.getElementById('num3').value);
+let inputCount = 0;
 
-    const numbers = [num1, num2, num3].sort((a, b) => a - b);
+function addNumberInput() {
+    if (inputCount < 10) {
+        inputCount++;
+        const inputGroup = document.getElementById('input-group');
+        const inputElement = document.createElement('input');
+        inputElement.type = 'number';
+        inputElement.className = 'form-control';
+        inputElement.placeholder = `Enter number ${inputCount}`;
+        inputElement.id = `num${inputCount}`;
+        inputGroup.appendChild(inputElement);
+    }
+}
+
+function calculateStatistics() {
+    const numbers = [];
+    for (let i = 1; i <= inputCount; i++) {
+        const num = parseFloat(document.getElementById(`num${i}`).value);
+        if (!isNaN(num)) {
+            numbers.push(num);
+        }
+    }
+
+    numbers.sort((a, b) => a - b);
 
     const max = Math.max(...numbers);
     const min = Math.min(...numbers);
-    const mean = (num1 + num2 + num3) / 3;
-    const median = numbers[1];
+    const mean = numbers.reduce((a, b) => a + b, 0) / numbers.length;
+    const median = numbers.length % 2 === 0 ? (numbers[numbers.length / 2 - 1] + numbers[numbers.length / 2]) / 2 : numbers[Math.floor(numbers.length / 2)];
     const range = max - min;
 
     document.getElementById('results').innerHTML = `
@@ -19,4 +38,9 @@ function calculateStatistics() {
         <p>Median: ${median}</p>
         <p>Range: ${range}</p>
     `;
+}
+
+// Initial three number inputs
+for (let i = 0; i < 3; i++) {
+    addNumberInput();
 }

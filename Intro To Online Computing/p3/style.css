@@ -6,15 +6,44 @@ body {
     max-width: 600px;
     margin: 50px auto;
     padding: 20px;
-    background-color: #1fb1e2de; /* Background of the box containing all functions in baby blue */
-    border-radius: 5px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
+.number-input {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+}
+
 
 .input-group input,
+
 button {
-    margin-bottom: 20px;
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 10px;
 }
 
+button:hover {
+    background-color: #218838;
+}
 #results {
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
     color: purple; /* Results display in purple font */
+}
+
+/* Ensuring that the text colors are not overridden by Bootstrap */
+h1, h4, p, button {
+    color: inherit !important;
 }
