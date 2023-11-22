@@ -1,0 +1,20 @@
+body {
+    color: limegreen; /* All other lettering in lime green */
+}
+
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #1fb1e2de; /* Background of the box containing all functions in baby blue */
+    border-radius: 5px;
+}
+
+.input-group input,
+button {
+    margin-bottom: 20px;
+}
+
+#results {
+    color: purple; /* Results display in purple font */
+}

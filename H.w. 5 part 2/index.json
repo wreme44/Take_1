@@ -1,0 +1,17 @@
+// const http = require("http");
+
+// const ost = '0.0.0.0';
+
+// port = 8000;
+ 
+
+// const requestlistener= function (req, res) {
+//     res.writeHead(200);
+//     res.end("Hello from my JS Backend Server!");
+
+// };
+
+// const server = http.createServer(requestlistener);
+// server.listen(port, host, () => {
+//     console.log(`Server is running on http://${host}:${port}`);
+// });
